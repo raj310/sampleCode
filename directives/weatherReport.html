@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="panel-title">{{convertToDate({date : weatherDay.dt}) | date : dateFormat}}</div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">Daytime Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.day})}}&deg; C</div>
+        </div>  
+        <div class="row">
+            <div class="col-md-6">Min Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.min})}}&deg; C</div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">Max Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.max})}}&deg; C</div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">Morning Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.morn})}}&deg; C</div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">Evening Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.eve})}}&deg; C</div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">Night Temperature: </div>
+            <div class="col-md-6">{{convertToStandard({degreeKelvin:weatherDay.temp.night})}}&deg; C</div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6">Pressure: </div>
+            <div class="col-md-6">{{weatherDay.pressure}} hPa</div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">Humidity: </div>
+            <div class="col-md-6">{{weatherDay.humidity}} %</div>
+        </div> 
+        <div class="row" ng-repeat="weat in weatherDay.weather">
+            <div class="col-md-6">Weather: </div>
+            <div class="col-md-6">{{weat.main +". ( "+ weat.description+" )"}}</div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">Wind Speed: </div>
+            <div class="col-md-6">{{weatherDay.speed}} km/hr</div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">Clouds: </div>
+            <div class="col-md-6">{{weatherDay.clouds}}</div>
+        </div>         
+    </div>
+</div>

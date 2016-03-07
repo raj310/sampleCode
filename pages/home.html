@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h1>Forecast by city</h1>
+        <hr/>
+        <form name="form" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                <input type="text" class="form-control" ng-model="city" id="city" name="city" placeholder="*Enter the City Name" required ng-model-options="{ updateOn: 'blur'}">
+            </div>
+            <div ng-show="form.$submitted || form.city.$touched">
+                <span class="error-msg" ng-show="form.city.$error.required">Please enter your city name.</span>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Get Forecast" ng-click="submit()" />
+        </form>
+    </div>
+</div>

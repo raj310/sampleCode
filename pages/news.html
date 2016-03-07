@@ -1,0 +1,12 @@
+<h1>Breaking News</h1>
+<hr/>
+<div class= "panel panel-primary" ng-repeat="doc in newsResult.response.docs">
+    <div class="panel-heading">
+        <div class=" panel-title">
+            <span><h3>-{{doc.headline.main}}</h1></span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <p>{{doc.lead_paragraph}}</p>
+    </div>
+</div>

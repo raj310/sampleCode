@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" ng-app="weatherApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Angular Tutorial</title>
+
+    <!--Load Twitter Bootstrap from CDN -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--Load Style.css-->
+    <link rel="stylesheet" href="style.css">
+    <!--Load jquery from CDN -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!--Load Twitter Bootstrap script from CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--Load Angularjs from CDN -->
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular-route.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular-resource.min.js"></script>
+</head>
+
+<body>
+    <!--Header Starts-->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Angular Weather App</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/home"><b class="fa fa-home">Home</b></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/home"><b class="fa fa-home">Get Weather</b></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/news"><b class="fa fa-home">News</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Header Ends-->
+
+    <!--Container 1 Starts-->
+    <div class="container">
+        <div id="main-view" ng-view></div>
+    </div>
+    <article id="decription" class="container">
+        <h2>Description:</h2>
+        <p>
+            This is the example of simple weather and news web application which I have created using various popular web development technologies including <b>HTML5, CSS3, AngularJS, JavaScript, JQuery, Bootstrap</b> and more. I have used various features and functionalities of AngularJS in this app like <b>Binding, Controllers, Routes, Filters</b> and more to access the Restful APIs and get the Data in JSON format. Apart from that I Have created the Custom Directive and services to display the JSON formatted data in the view.</p>
+        <p> I am working with the styles now to make this app more attractive. I am using bootstrap and media queries to make this app responsive and work on multiple screens.
+        </p>
+    </article>
+    <footer>
+        Simple AngularJS Application
+    </footer>
+    <!--Container 1 Ends-->
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/routes.js"></script>
+    <script src="Scripts/services.js"></script>
+    <script src="Scripts/controllers.js"></script>
+    <script src="Scripts/directives.js"></script>
+</body>
+
+</html>
